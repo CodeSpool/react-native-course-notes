@@ -8,11 +8,11 @@
   - layers are ordered in stack format (array)
   - transitions push or pop routes to that array
 - different route transitions are called _scene configurations_
-  - fifferent platforms have different transitions
+  - different platforms have different transitions
 
 ### Native elements
 There are no DOM elements like ```<div>```, ```<a>``` or ```<span>```.
-If looking for a speciffic native component, odds are it has already been implemented ba React Native Core or the community.
+If looking for a specific native component, odds are it has already been implemented ba React Native Core or the community.
 
 #### Most Commonly used components:
 ```<View>``` 
@@ -32,20 +32,31 @@ If looking for a speciffic native component, odds are it has already been implem
 - ```onChangeText``` prop called on change
 
 ```<TouchableHighlight><TouchableOpacity><TouchableWithoutFeedback>```
-- most components are not able to handle ```onPress``` prop and have to be wrapped in one of theese components
+- most components are not able to handle ```onPress``` prop and have to be wrapped in one of these components
 - avoid ```<TouchableWithoutFeedback>``` (bad UX)
 
 ```<ActivityIndicator>```
-- default loadnig indicator
+- default loading indicator
 - change default styling based on platform
 
 ```<ScrollView>```
 - overflow content is not visible in regular ```View```
-- all content is alwais rendered
+- all content is always rendered
 - not suitable for larger lists
 
 ```<ListView>```
 - more performant for longer lists than ```<ScrollView>```
 - only renders elements currently showing on the screen
 
-## 
+## Hello world app
+
+- Platform specific code
+  - Any filename named ```*.android.js``` or ```*.ios.js``` will be rendered only for the target platform. 
+  - ```<View>``` component automatically maps to platform-specific equivalent (UiView on IOS, Android.View on android).
+
+- All styles in react native are written in JavaScript - no CSS:
+  - ```StyleSheet.create({......})```
+
+- ```AppRegistry```
+  - initialize the RN project
+  - call once in the root of the project
