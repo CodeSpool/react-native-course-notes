@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { LoginButton } from 'react-native-fbsdk'
 
-export default class ReactModoro extends Component {
+class AppContainer extends Component {
   render () {
     return (
       <View style={styles.container}>
@@ -18,6 +18,8 @@ export default class ReactModoro extends Component {
     )
   }
 }
+
+export default AppContainer
 
 const styles = StyleSheet.create({
   container: {
